@@ -317,8 +317,7 @@ namespace PuzzlePr.Viewer
 
                 if (player.states == null || player.states[player.states.Count - 1] == null)
                 {
-                    // TODO - pull from current lang messages
-                    MessageBox.Show("Game not found.", "Puzzle Game", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    PuzzleMessage.showMessage(5);
                 }
                 else
                 {
