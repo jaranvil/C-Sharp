@@ -1,0 +1,9 @@
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\bin\Debug\UnitTestPuzzle.dll
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\bin\Debug\UnitTestPuzzle.pdb
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\bin\Debug\PuzzleBiz.dll
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\bin\Debug\PuzzlePr.exe
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\bin\Debug\PuzzleBiz.pdb
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\bin\Debug\PuzzlePr.pdb
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\obj\Debug\UnitTestPuzzle.csprojResolveAssemblyReference.cache
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\obj\Debug\UnitTestPuzzle.dll
+C:\Users\scorpion\Documents\nscc\C#\workshop\Gaming\UnitTestProject1\obj\Debug\UnitTestPuzzle.pdb
