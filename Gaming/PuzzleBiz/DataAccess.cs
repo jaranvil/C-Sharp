@@ -11,7 +11,8 @@ namespace PuzzleBiz.DA
 
 		SavedState LoadGame(SavedState game, Player playe, string name);
 
-		void SaveScore(int score);
+		void SaveScore(int score, Player player);
+        List<Score> GetHighScores();
 
         bool CheckCredentials( ref Player player);
 

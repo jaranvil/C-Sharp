@@ -9,9 +9,10 @@ namespace PuzzleBiz.Util
     struct Constants
     {
         public const string FILE = "file";
-        private const string HOME_DIRECTORY = "C:\\Users\\s0739107\\Desktop\\files";
+        private const string HOME_DIRECTORY = "C:\\Users\\w0269431\\Downloads";
         public const string CONFIG_FILE = "puzzle.cfg";
         public const string PLAYERFILE = "playerFile";
+        public const string SCOREFILE = "scoreFile";
         public const string LANG = "lang";
         public const string PERSISTANCE = "persistance";
         public const string STATEFILe = "stateFile";

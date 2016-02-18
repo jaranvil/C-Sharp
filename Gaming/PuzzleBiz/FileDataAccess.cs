@@ -82,7 +82,7 @@ namespace PuzzleBiz.DA
                 sw.Write(Environment.NewLine+player.Id.ToString() +
                     ":" + game.Name+ ":" +game.Time.ToLongDateString() +
                     ":" + game.Steps + ":" + game.State);
-            }
+            }            
         }
 
         public SavedState LoadGame(SavedState game, Player playe, string name)
@@ -104,6 +104,7 @@ namespace PuzzleBiz.DA
                         game.Name = data[1];
                         game.Steps = Int32.Parse(data[3]);
                         game.State = data[4];
+                        file2.Close();
                         return game;
                     }
                 }
@@ -117,8 +118,64 @@ namespace PuzzleBiz.DA
             return null;
         }
 
-        public void SaveScore(int score){}
+        public void SaveScore(int score, Player player)
+        {
+            List<int> highScores = new List<int>();
 
+            string file;
+            string line;
+            Configuration.ConfigurationMap.TryGetValue(Constants.SCOREFILE, out file);
+            System.IO.StreamReader file2 = new System.IO.StreamReader(Constants.getFile(file));
+            while ((line = file2.ReadLine()) != null)
+            {
+                if (!line.StartsWith("#"))
+                {
+                    string[] data = line.Split(':');
+                    highScores.Add(Int32.Parse(data[2]));
+                }
+            }
+            file2.Close();
+
+            bool newHighScore = false;
+            for (int i = 0;i < highScores.Count;i++)
+            {
+                if (score < highScores[i])
+                    newHighScore = true;
+            }
+
+            if (newHighScore)
+            {
+                Configuration.ConfigurationMap.TryGetValue(Constants.SCOREFILE, out file);
+                using (StreamWriter sw = new StreamWriter(Constants.getFile(file), true))
+                {
+                    //#id:name:score
+                    sw.Write(Environment.NewLine + player.Id.ToString() +
+                        ":" + player.Name + 
+                        ":" + score);
+                } 
+            }            
+        }
+
+        public List<Score> GetHighScores()
+        {
+            List<Score> highScores = new List<Score>();
+
+            string file;
+            string line;
+            Configuration.ConfigurationMap.TryGetValue(Constants.SCOREFILE, out file);
+            System.IO.StreamReader file2 = new System.IO.StreamReader(Constants.getFile(file));
+            while ((line = file2.ReadLine()) != null)
+            {
+                if (!line.StartsWith("#"))
+                {
+                    string[] data = line.Split(':');
+                    highScores.Add(new Score(Int32.Parse(data[0]), data[1], Int32.Parse(data[2])));                    
+                }
+            }
+            file2.Close();
+
+            return highScores;
+        }
 
         private static Player loadFileToPlayer(string line)
            

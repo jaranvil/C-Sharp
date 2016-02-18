@@ -24,3 +24,17 @@ C:\Users\s0739107\Documents\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Vie
 C:\Users\s0739107\Documents\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Properties.Resources.resources
 C:\Users\s0739107\Documents\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Security.resources
 C:\Users\s0739107\Documents\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.csproj.GenerateResource.Cache
+H:\Repos\C-Sharp\Gaming\PuzzlePr\bin\Debug\PuzzlePr.exe.config
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.exe
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.pdb
+H:\Repos\C-Sharp\Gaming\PuzzlePr\bin\Debug\PuzzlePr.exe
+H:\Repos\C-Sharp\Gaming\PuzzlePr\bin\Debug\PuzzlePr.pdb
+H:\Repos\C-Sharp\Gaming\PuzzlePr\bin\Debug\PuzzleBiz.dll
+H:\Repos\C-Sharp\Gaming\PuzzlePr\bin\Debug\PuzzleBiz.pdb
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.csprojResolveAssemblyReference.cache
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.MainForm.resources
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.prompt.resources
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Properties.Resources.resources
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Security.resources
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.csproj.GenerateResource.Cache
+H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.scores.resources

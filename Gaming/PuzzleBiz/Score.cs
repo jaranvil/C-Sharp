@@ -6,33 +6,15 @@ namespace PuzzleBiz.Model
 {
 	public class Score
 	{
-		public int Id
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
+        public int id;
+        public string player;
+        public int score;
 
-		public int score
-		{
-			get
-			{
-				throw new NotImplementedException();
-			}
-			set
-			{
-				throw new NotImplementedException();
-			}
-		}
-
-        public virtual void Save()
+        public Score(int id, string player, int score)
         {
-
+            this.id = id;
+            this.player = player;
+            this.score = score;
         }
 	}
 }

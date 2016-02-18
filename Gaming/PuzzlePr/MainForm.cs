@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PuzzleBiz.Model;
 using PuzzleBiz.Util;
+using PuzzleBiz.DA;
+using PuzzleBiz.Loader;
 
 
 namespace PuzzlePr.Viewer
@@ -19,6 +21,7 @@ namespace PuzzlePr.Viewer
         public MainForm()
         {
             InitializeComponent();
+            DisplayRandomNumbers(16);
         }
         private bool CheckWinning()
         {
@@ -175,6 +178,7 @@ namespace PuzzlePr.Viewer
             if (CheckWinning())
             {
                 MessageBox.Show("Winner");
+                Configuration.da.SaveScore(int.Parse(steps.Text), player);
             }
         }
         public void setPlayer(Player player){
@@ -324,6 +328,18 @@ namespace PuzzlePr.Viewer
                     LoadState(state);
                 }
             }
+        }
+
+        private void highScoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            scores scores = new scores();
+            scores.ShowDialog();
+        }
+
+        private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            scores scores = new scores();
+            scores.ShowDialog();
         }
     }
 }

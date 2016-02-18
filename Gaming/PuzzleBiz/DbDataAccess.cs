@@ -16,7 +16,7 @@ namespace PuzzleBiz.DA
 
         public SavedState LoadGame(SavedState game, Player playe, string name) { return null; }
 
-        public void SaveScore(int score) { }
+        public void SaveScore(int score, Player player) { }
 
         public bool CheckCredentials( ref Player player)
         {
@@ -29,6 +29,11 @@ namespace PuzzleBiz.DA
         public void loadMessages(ref Dictionary<int, String> messages, string file)
         {
 
+        }
+
+        public List<Score> GetHighScores()
+        {
+            return null;
         }
 	}
 }
