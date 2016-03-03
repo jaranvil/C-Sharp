@@ -1,0 +1,14 @@
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\tom.exe.config
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\tom.exe
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\tom.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\NetIrc2.dll
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\NetIrc2.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\NetIrc2.xml
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.Form1.resources
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.Properties.Resources.resources
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.csproj.GenerateResource.Cache
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.exe
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\ChatSharp.dll
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\ChatSharp.pdb
