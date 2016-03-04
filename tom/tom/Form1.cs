@@ -20,8 +20,11 @@ namespace tom
         {
             InitializeComponent();
             IRC irc = new IRC();
-            Form2 form = new Form2();
-            form.Show();
+
+            const string caption = "Error";
+            var result = MessageBox.Show("Error. \nThis program is not compatible with your version of Windows.", caption,
+                                         MessageBoxButtons.AbortRetryIgnore,
+                                         MessageBoxIcon.Error);
 
         }
 
