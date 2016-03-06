@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.Collections.Specialized;
 using System.IO;
+using System.Windows.Forms;
 
 
 namespace tom
@@ -42,6 +43,7 @@ namespace tom
             irc.SendMessage("     name              --get system name");
             irc.SendMessage("     processes         --lists all processes");
             irc.SendMessage("     kill [process]    --kill process by name");
+            irc.SendMessage("     goFishing [type]    --phishing");
         }
 
         public void Name()

@@ -22,8 +22,10 @@ C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.Form1.resources
 C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.Form2.resources
 C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.Properties.Resources.resources
 C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.csproj.GenerateResource.Cache
-C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app2.exe.config
-C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app2.exe
-C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app2.pdb
-C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\app2.exe
-C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\app2.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\tom.Google.resources
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app3.exe.config
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app3.exe
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\bin\Debug\app3.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\app3.exe
+C:\Users\Jared\Documents\Repos\C-Sharp\tom\tom\obj\Debug\app3.pdb

