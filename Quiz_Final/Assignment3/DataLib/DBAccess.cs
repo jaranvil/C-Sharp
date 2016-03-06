@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-namespace QuizLib
+namespace DataLib
 {
     public class DBAccess
     {
@@ -17,10 +17,10 @@ namespace QuizLib
 
         private class DataHelper : DataContext
         {
-            
+
             public DataHelper() :
-                base("Data Source=(localdb)\\ProjectsV13; Initial Catalog=Quiz; Integrated Security=True"
-                + "AttachDbFilename=C:\\Users\\s0739107\\Documents\\Repos\\C-Sharp\\Quiz.mdf ; Initial Catalog=Quiz; Integrated Security=True")
+                base("Data Source=(localdb)\\ProjectsV13; Initial Catalog=DataAssgn3; Integrated Security=True"
+                + "AttachDbFilename=C:\\Users\\s0739107\\Documents\\Repos\\C-Sharp\\Quiz_Final\\DataAssgn3.mdf ; Initial Catalog=DataAssgn3; Integrated Security=True")
             { }
 
             public Table<Examinee> Examinees;

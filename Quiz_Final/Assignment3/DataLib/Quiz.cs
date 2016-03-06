@@ -6,21 +6,18 @@ using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-namespace QuizLib
+namespace DataLib
 {
     [Table]
-    public class Option
+    public class Quiz
     {
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id;
 
         [Column]
-        public int QuestionId;
+        public int Score;
 
         [Column]
-        public bool CorrectAnswer;
-
-        [Column]
-        public string Text;
+        public string Name;
     }
 }

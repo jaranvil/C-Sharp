@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace QuizLib {
+namespace QuizClassLib {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace QuizLib {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("QuizDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Quiz2DataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class QuizDataSet : global::System.Data.DataSet {
+    public partial class Quiz2DataSet : global::System.Data.DataSet {
         
         private ExamineeDataTable tableExaminee;
         
@@ -36,7 +36,7 @@ namespace QuizLib {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public QuizDataSet() {
+        public Quiz2DataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -47,7 +47,7 @@ namespace QuizLib {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected QuizDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Quiz2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -172,7 +172,7 @@ namespace QuizLib {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            QuizDataSet cln = ((QuizDataSet)(base.Clone()));
+            Quiz2DataSet cln = ((Quiz2DataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -271,9 +271,9 @@ namespace QuizLib {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "QuizDataSet";
+            this.DataSetName = "Quiz2DataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/QuizDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Quiz2DataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableExaminee = new ExamineeDataTable();
@@ -321,7 +321,7 @@ namespace QuizLib {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            QuizDataSet ds = new QuizDataSet();
+            Quiz2DataSet ds = new Quiz2DataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -386,7 +386,7 @@ namespace QuizLib {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnName;
+            private global::System.Data.DataColumn columnname;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -431,9 +431,9 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn nameColumn {
                 get {
-                    return this.columnName;
+                    return this.columnname;
                 }
             }
             
@@ -474,11 +474,11 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ExamineeRow AddExamineeRow(int Id, string Name) {
+            public ExamineeRow AddExamineeRow(int Id, string name) {
                 ExamineeRow rowExamineeRow = ((ExamineeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        Name};
+                        name};
                 rowExamineeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowExamineeRow);
                 return rowExamineeRow;
@@ -509,7 +509,7 @@ namespace QuizLib {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnName = base.Columns["Name"];
+                this.columnname = base.Columns["name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -517,14 +517,14 @@ namespace QuizLib {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
+                this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnname);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 50;
+                this.columnname.AllowDBNull = false;
+                this.columnname.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -592,7 +592,7 @@ namespace QuizLib {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QuizDataSet ds = new QuizDataSet();
+                Quiz2DataSet ds = new Quiz2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -895,7 +895,7 @@ namespace QuizLib {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QuizDataSet ds = new QuizDataSet();
+                Quiz2DataSet ds = new Quiz2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -963,9 +963,9 @@ namespace QuizLib {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnText;
-            
             private global::System.Data.DataColumn columnQuizId;
+            
+            private global::System.Data.DataColumn columnText;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1010,17 +1010,17 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TextColumn {
+            public global::System.Data.DataColumn QuizIdColumn {
                 get {
-                    return this.columnText;
+                    return this.columnQuizId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn QuizIdColumn {
+            public global::System.Data.DataColumn TextColumn {
                 get {
-                    return this.columnQuizId;
+                    return this.columnText;
                 }
             }
             
@@ -1061,12 +1061,12 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public QuestionRow AddQuestionRow(int Id, string Text, int QuizId) {
+            public QuestionRow AddQuestionRow(int Id, int QuizId, string Text) {
                 QuestionRow rowQuestionRow = ((QuestionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        Text,
-                        QuizId};
+                        QuizId,
+                        Text};
                 rowQuestionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuestionRow);
                 return rowQuestionRow;
@@ -1097,8 +1097,8 @@ namespace QuizLib {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnText = base.Columns["Text"];
                 this.columnQuizId = base.Columns["QuizId"];
+                this.columnText = base.Columns["Text"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1106,17 +1106,17 @@ namespace QuizLib {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
-                this.columnText = new global::System.Data.DataColumn("Text", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnText);
                 this.columnQuizId = new global::System.Data.DataColumn("QuizId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQuizId);
+                this.columnText = new global::System.Data.DataColumn("Text", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnText);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
+                this.columnQuizId.AllowDBNull = false;
                 this.columnText.AllowDBNull = false;
                 this.columnText.MaxLength = 100;
-                this.columnQuizId.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1184,7 +1184,7 @@ namespace QuizLib {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QuizDataSet ds = new QuizDataSet();
+                Quiz2DataSet ds = new Quiz2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1252,11 +1252,9 @@ namespace QuizLib {
             
             private global::System.Data.DataColumn columnId;
             
-            private global::System.Data.DataColumn columnScore;
-            
-            private global::System.Data.DataColumn columnDate;
-            
             private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnScore;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1301,25 +1299,17 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ScoreColumn {
-                get {
-                    return this.columnScore;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DateColumn {
-                get {
-                    return this.columnDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn NameColumn {
                 get {
                     return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ScoreColumn {
+                get {
+                    return this.columnScore;
                 }
             }
             
@@ -1360,13 +1350,12 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public QuizRow AddQuizRow(int Id, int Score, System.DateTime Date, string Name) {
+            public QuizRow AddQuizRow(int Id, byte[] Name, int Score) {
                 QuizRow rowQuizRow = ((QuizRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
-                        Score,
-                        Date,
-                        Name};
+                        Name,
+                        Score};
                 rowQuizRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuizRow);
                 return rowQuizRow;
@@ -1397,9 +1386,8 @@ namespace QuizLib {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
-                this.columnScore = base.Columns["Score"];
-                this.columnDate = base.Columns["Date"];
                 this.columnName = base.Columns["Name"];
+                this.columnScore = base.Columns["Score"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1407,20 +1395,15 @@ namespace QuizLib {
             private void InitClass() {
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
                 this.columnScore = new global::System.Data.DataColumn("Score", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnScore);
-                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
-                this.columnScore.AllowDBNull = false;
-                this.columnDate.AllowDBNull = false;
                 this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1488,7 +1471,7 @@ namespace QuizLib {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QuizDataSet ds = new QuizDataSet();
+                Quiz2DataSet ds = new Quiz2DataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1574,12 +1557,12 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Name {
+            public string name {
                 get {
-                    return ((string)(this[this.tableExaminee.NameColumn]));
+                    return ((string)(this[this.tableExaminee.nameColumn]));
                 }
                 set {
-                    this[this.tableExaminee.NameColumn] = value;
+                    this[this.tableExaminee.nameColumn] = value;
                 }
             }
         }
@@ -1687,23 +1670,23 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Text {
-                get {
-                    return ((string)(this[this.tableQuestion.TextColumn]));
-                }
-                set {
-                    this[this.tableQuestion.TextColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int QuizId {
                 get {
                     return ((int)(this[this.tableQuestion.QuizIdColumn]));
                 }
                 set {
                     this[this.tableQuestion.QuizIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Text {
+                get {
+                    return ((string)(this[this.tableQuestion.TextColumn]));
+                }
+                set {
+                    this[this.tableQuestion.TextColumn] = value;
                 }
             }
         }
@@ -1735,9 +1718,25 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] Name {
+                get {
+                    return ((byte[])(this[this.tableQuiz.NameColumn]));
+                }
+                set {
+                    this[this.tableQuiz.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Score {
                 get {
-                    return ((int)(this[this.tableQuiz.ScoreColumn]));
+                    try {
+                        return ((int)(this[this.tableQuiz.ScoreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Score\' in table \'Quiz\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableQuiz.ScoreColumn] = value;
@@ -1746,24 +1745,14 @@ namespace QuizLib {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Date {
-                get {
-                    return ((global::System.DateTime)(this[this.tableQuiz.DateColumn]));
-                }
-                set {
-                    this[this.tableQuiz.DateColumn] = value;
-                }
+            public bool IsScoreNull() {
+                return this.IsNull(this.tableQuiz.ScoreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Name {
-                get {
-                    return ((string)(this[this.tableQuiz.NameColumn]));
-                }
-                set {
-                    this[this.tableQuiz.NameColumn] = value;
-                }
+            public void SetScoreNull() {
+                this[this.tableQuiz.ScoreColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1904,7 +1893,7 @@ namespace QuizLib {
         }
     }
 }
-namespace QuizLib.QuizDataSetTableAdapters {
+namespace QuizClassLib.Quiz2DataSetTableAdapters {
     
     
     /// <summary>
@@ -2029,39 +2018,39 @@ namespace QuizLib.QuizDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Examinee";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("name", "name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Examinee] WHERE (([Id] = @Original_Id) AND ([Name] = @Original" +
-                "_Name))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Examinee] WHERE (([Id] = @Original_Id) AND ([name] = @Original" +
+                "_name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Examinee] ([Id], [Name]) VALUES (@Id, @Name);\r\nSELECT Id, Name" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Examinee] ([Id], [name]) VALUES (@Id, @name);\r\nSELECT Id, name" +
                 " FROM Examinee WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Examinee] SET [Id] = @Id, [Name] = @Name WHERE (([Id] = @Original_I" +
-                "d) AND ([Name] = @Original_Name));\r\nSELECT Id, Name FROM Examinee WHERE (Id = @I" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Examinee] SET [Id] = @Id, [name] = @name WHERE (([Id] = @Original_I" +
+                "d) AND ([name] = @Original_name));\r\nSELECT Id, name FROM Examinee WHERE (Id = @I" +
                 "d)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuizLib.Properties.Settings.Default.QuizConnectionString;
+            this._connection.ConnectionString = global::QuizClassLib.Properties.Settings.Default.Quiz2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2070,7 +2059,7 @@ namespace QuizLib.QuizDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name FROM dbo.Examinee";
+            this._commandCollection[0].CommandText = "SELECT Id, name FROM dbo.Examinee";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2078,7 +2067,7 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizDataSet.ExamineeDataTable dataTable) {
+        public virtual int Fill(Quiz2DataSet.ExamineeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2091,9 +2080,9 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizDataSet.ExamineeDataTable GetData() {
+        public virtual Quiz2DataSet.ExamineeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizDataSet.ExamineeDataTable dataTable = new QuizDataSet.ExamineeDataTable();
+            Quiz2DataSet.ExamineeDataTable dataTable = new Quiz2DataSet.ExamineeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2101,14 +2090,14 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet.ExamineeDataTable dataTable) {
+        public virtual int Update(Quiz2DataSet.ExamineeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet dataSet) {
+        public virtual int Update(Quiz2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Examinee");
         }
         
@@ -2131,13 +2120,13 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Name) {
+        public virtual int Delete(int Original_Id, string Original_name) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Name");
+            if ((Original_name == null)) {
+                throw new global::System.ArgumentNullException("Original_name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2159,13 +2148,13 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Name) {
+        public virtual int Insert(int Id, string name) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+            if ((name == null)) {
+                throw new global::System.ArgumentNullException("name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2187,20 +2176,20 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string Name, int Original_Id, string Original_Name) {
+        public virtual int Update(int Id, string name, int Original_Id, string Original_name) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+            if ((name == null)) {
+                throw new global::System.ArgumentNullException("name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(name));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
-            if ((Original_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Name");
+            if ((Original_name == null)) {
+                throw new global::System.ArgumentNullException("Original_name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2222,8 +2211,8 @@ namespace QuizLib.QuizDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, int Original_Id, string Original_Name) {
-            return this.Update(Original_Id, Name, Original_Id, Original_Name);
+        public virtual int Update(string name, int Original_Id, string Original_name) {
+            return this.Update(Original_Id, name, Original_Id, Original_name);
         }
     }
     
@@ -2394,7 +2383,7 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuizLib.Properties.Settings.Default.QuizConnectionString;
+            this._connection.ConnectionString = global::QuizClassLib.Properties.Settings.Default.Quiz2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2411,7 +2400,7 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizDataSet.OptionDataTable dataTable) {
+        public virtual int Fill(Quiz2DataSet.OptionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2424,9 +2413,9 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizDataSet.OptionDataTable GetData() {
+        public virtual Quiz2DataSet.OptionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizDataSet.OptionDataTable dataTable = new QuizDataSet.OptionDataTable();
+            Quiz2DataSet.OptionDataTable dataTable = new Quiz2DataSet.OptionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2434,14 +2423,14 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet.OptionDataTable dataTable) {
+        public virtual int Update(Quiz2DataSet.OptionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet dataSet) {
+        public virtual int Update(Quiz2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Option");
         }
         
@@ -2714,44 +2703,44 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Question";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Text", "Text");
             tableMapping.ColumnMappings.Add("QuizId", "QuizId");
+            tableMapping.ColumnMappings.Add("Text", "Text");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Question] WHERE (([Id] = @Original_Id) AND ([Text] = @Original" +
-                "_Text) AND ([QuizId] = @Original_QuizId))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Question] WHERE (([Id] = @Original_Id) AND ([QuizId] = @Origin" +
+                "al_QuizId) AND ([Text] = @Original_Text))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QuizId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuizId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Question] ([Id], [Text], [QuizId]) VALUES (@Id, @Text, @QuizId" +
-                ");\r\nSELECT Id, Text, QuizId FROM Question WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Question] ([Id], [QuizId], [Text]) VALUES (@Id, @QuizId, @Text" +
+                ");\r\nSELECT Id, QuizId, Text FROM Question WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QuizId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuizId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Question] SET [Id] = @Id, [Text] = @Text, [QuizId] = @QuizId WHERE " +
-                "(([Id] = @Original_Id) AND ([Text] = @Original_Text) AND ([QuizId] = @Original_Q" +
-                "uizId));\r\nSELECT Id, Text, QuizId FROM Question WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Question] SET [Id] = @Id, [QuizId] = @QuizId, [Text] = @Text WHERE " +
+                "(([Id] = @Original_Id) AND ([QuizId] = @Original_QuizId) AND ([Text] = @Original" +
+                "_Text));\r\nSELECT Id, QuizId, Text FROM Question WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QuizId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuizId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QuizId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QuizId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Text", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Text", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuizLib.Properties.Settings.Default.QuizConnectionString;
+            this._connection.ConnectionString = global::QuizClassLib.Properties.Settings.Default.Quiz2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2760,7 +2749,7 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Text, QuizId FROM dbo.Question";
+            this._commandCollection[0].CommandText = "SELECT Id, QuizId, Text FROM dbo.Question";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2768,7 +2757,7 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizDataSet.QuestionDataTable dataTable) {
+        public virtual int Fill(Quiz2DataSet.QuestionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2781,9 +2770,9 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizDataSet.QuestionDataTable GetData() {
+        public virtual Quiz2DataSet.QuestionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizDataSet.QuestionDataTable dataTable = new QuizDataSet.QuestionDataTable();
+            Quiz2DataSet.QuestionDataTable dataTable = new Quiz2DataSet.QuestionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2791,14 +2780,14 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet.QuestionDataTable dataTable) {
+        public virtual int Update(Quiz2DataSet.QuestionDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet dataSet) {
+        public virtual int Update(Quiz2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Question");
         }
         
@@ -2821,15 +2810,15 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Text, int Original_QuizId) {
+        public virtual int Delete(int Original_Id, int Original_QuizId, string Original_Text) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_QuizId));
             if ((Original_Text == null)) {
                 throw new global::System.ArgumentNullException("Original_Text");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Text));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Text));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_QuizId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2850,15 +2839,15 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string Text, int QuizId) {
+        public virtual int Insert(int Id, int QuizId, string Text) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(QuizId));
             if ((Text == null)) {
                 throw new global::System.ArgumentNullException("Text");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Text));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Text));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(QuizId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2879,23 +2868,23 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string Text, int QuizId, int Original_Id, string Original_Text, int Original_QuizId) {
+        public virtual int Update(int Id, int QuizId, string Text, int Original_Id, int Original_QuizId, string Original_Text) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(QuizId));
             if ((Text == null)) {
                 throw new global::System.ArgumentNullException("Text");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Text));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Text));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(QuizId));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_QuizId));
             if ((Original_Text == null)) {
                 throw new global::System.ArgumentNullException("Original_Text");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Text));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Text));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_QuizId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2916,8 +2905,8 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Text, int QuizId, int Original_Id, string Original_Text, int Original_QuizId) {
-            return this.Update(Original_Id, Text, QuizId, Original_Id, Original_Text, Original_QuizId);
+        public virtual int Update(int QuizId, string Text, int Original_Id, int Original_QuizId, string Original_Text) {
+            return this.Update(Original_Id, QuizId, Text, Original_Id, Original_QuizId, Original_Text);
         }
     }
     
@@ -3043,48 +3032,46 @@ SELECT Id, Text, CorrectAnswer, QuestionId FROM [Option] WHERE (Id = @Id)";
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Quiz";
             tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Score", "Score");
-            tableMapping.ColumnMappings.Add("Date", "Date");
             tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Score", "Score");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Quiz] WHERE (([Id] = @Original_Id) AND ([Score] = @Original_Sc" +
-                "ore) AND ([Date] = @Original_Date) AND ([Name] = @Original_Name))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Quiz] WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Nam" +
+                "e) AND ((@IsNull_Score = 1 AND [Score] IS NULL) OR ([Score] = @Original_Score)))" +
+                "";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quiz] ([Id], [Score], [Date], [Name]) VALUES (@Id, @Score, @Da" +
-                "te, @Name);\r\nSELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Quiz] ([Id], [Name], [Score]) VALUES (@Id, @Name, @Score);\r\nSE" +
+                "LECT Id, Name, Score FROM Quiz WHERE (Id = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Quiz] SET [Id] = @Id, [Score] = @Score, [Date] = @Date, [Name] = @Name WHERE (([Id] = @Original_Id) AND ([Score] = @Original_Score) AND ([Date] = @Original_Date) AND ([Name] = @Original_Name));
-SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Quiz] SET [Id] = @Id, [Name] = @Name, [Score] = @Score WHERE (([Id] = @Original_Id) AND ([Name] = @Original_Name) AND ((@IsNull_Score = 1 AND [Score] IS NULL) OR ([Score] = @Original_Score)));
+SELECT Id, Name, Score FROM Quiz WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Score", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Score", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuizLib.Properties.Settings.Default.QuizConnectionString;
+            this._connection.ConnectionString = global::QuizClassLib.Properties.Settings.Default.Quiz2ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3093,7 +3080,7 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Score, Date, Name FROM dbo.Quiz";
+            this._commandCollection[0].CommandText = "SELECT Id, Name, Score FROM dbo.Quiz";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3101,7 +3088,7 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QuizDataSet.QuizDataTable dataTable) {
+        public virtual int Fill(Quiz2DataSet.QuizDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3114,9 +3101,9 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QuizDataSet.QuizDataTable GetData() {
+        public virtual Quiz2DataSet.QuizDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QuizDataSet.QuizDataTable dataTable = new QuizDataSet.QuizDataTable();
+            Quiz2DataSet.QuizDataTable dataTable = new Quiz2DataSet.QuizDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3124,14 +3111,14 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet.QuizDataTable dataTable) {
+        public virtual int Update(Quiz2DataSet.QuizDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QuizDataSet dataSet) {
+        public virtual int Update(Quiz2DataSet dataSet) {
             return this.Adapter.Update(dataSet, "Quiz");
         }
         
@@ -3154,15 +3141,21 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_Score, System.DateTime Original_Date, string Original_Name) {
+        public virtual int Delete(int Original_Id, byte[] Original_Name, global::System.Nullable<int> Original_Score) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Score));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Date));
             if ((Original_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Name));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((byte[])(Original_Name));
+            }
+            if ((Original_Score.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Score.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3184,15 +3177,19 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, int Score, System.DateTime Date, string Name) {
+        public virtual int Insert(int Id, byte[] Name, global::System.Nullable<int> Score) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Score));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Date));
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((byte[])(Name));
+            }
+            if ((Score.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Score.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3214,24 +3211,34 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, int Score, System.DateTime Date, string Name, int Original_Id, int Original_Score, System.DateTime Original_Date, string Original_Name) {
+        public virtual int Update(int Id, byte[] Name, global::System.Nullable<int> Score, int Original_Id, byte[] Original_Name, global::System.Nullable<int> Original_Score) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Score));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Date));
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((byte[])(Name));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Score));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Date));
+            if ((Score.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Score.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
             if ((Original_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Name));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((byte[])(Original_Name));
+            }
+            if ((Original_Score.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Score.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3253,8 +3260,8 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Score, System.DateTime Date, string Name, int Original_Id, int Original_Score, System.DateTime Original_Date, string Original_Name) {
-            return this.Update(Original_Id, Score, Date, Name, Original_Id, Original_Score, Original_Date, Original_Name);
+        public virtual int Update(byte[] Name, global::System.Nullable<int> Score, int Original_Id, byte[] Original_Name, global::System.Nullable<int> Original_Score) {
+            return this.Update(Original_Id, Name, Score, Original_Id, Original_Name, Original_Score);
         }
     }
     
@@ -3418,7 +3425,7 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(QuizDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Quiz2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._examineeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Examinee.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -3464,7 +3471,7 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(QuizDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Quiz2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._examineeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Examinee.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -3506,7 +3513,7 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(QuizDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Quiz2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._quizTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Quiz.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -3572,7 +3579,7 @@ SELECT Id, Score, Date, Name FROM Quiz WHERE (Id = @Id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(QuizDataSet dataSet) {
+        public virtual int UpdateAll(Quiz2DataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
 
-namespace QuizLib
+namespace DataLib
 {
     [Table]
     public class Option
@@ -17,7 +17,7 @@ namespace QuizLib
         [Column]
         public int QuestionId;
 
-        [Column]
+        [Column(CanBeNull = true)]
         public bool CorrectAnswer;
 
         [Column]
