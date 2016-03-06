@@ -341,5 +341,12 @@ namespace PuzzlePr.Viewer
             scores scores = new scores();
             scores.ShowDialog();
         }
+
+        private void populateDBTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Management form = new Management();
+            form.ShowDialog();
+
+        }
     }
 }

@@ -38,3 +38,5 @@ H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Properties.Resources.
 H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Security.resources
 H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.csproj.GenerateResource.Cache
 H:\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.scores.resources
+C:\Users\s0739107\Documents\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.scores.resources
+C:\Users\s0739107\Documents\Repos\C-Sharp\Gaming\PuzzlePr\obj\Debug\PuzzlePr.Viewer.Management.resources

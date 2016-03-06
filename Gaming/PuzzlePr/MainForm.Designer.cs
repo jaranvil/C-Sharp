@@ -70,11 +70,13 @@
             this.randomizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.highScoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.highScoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.populateDBTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -138,7 +140,7 @@
             this.playToolStripMenuItem1,
             this.formatToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(141, 48);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // playToolStripMenuItem1
@@ -149,7 +151,7 @@
             this.loadToolStripMenuItem1,
             this.highScoresToolStripMenuItem});
             this.playToolStripMenuItem1.Name = "playToolStripMenuItem1";
-            this.playToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.playToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
             this.playToolStripMenuItem1.Text = "Play";
             // 
             // randomizeToolStripMenuItem1
@@ -176,7 +178,7 @@
             // highScoresToolStripMenuItem
             // 
             this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.highScoresToolStripMenuItem.Text = "High Scores";
             this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
             // 
@@ -511,7 +513,8 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playToolStripMenuItem,
-            this.formatToolStripMenuItem});
+            this.formatToolStripMenuItem,
+            this.manageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(677, 24);
@@ -553,6 +556,14 @@
             this.loadToolStripMenuItem.Text = "Load           ";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
+            // highScoresToolStripMenuItem1
+            // 
+            this.highScoresToolStripMenuItem1.Name = "highScoresToolStripMenuItem1";
+            this.highScoresToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.highScoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem1.Text = "High Scores";
+            this.highScoresToolStripMenuItem1.Click += new System.EventHandler(this.highScoresToolStripMenuItem1_Click);
+            // 
             // formatToolStripMenuItem
             // 
             this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -580,13 +591,20 @@
             this.fontColorToolStripMenuItem.Text = "Font Color";
             this.fontColorToolStripMenuItem.Click += new System.EventHandler(this.fontColorToolStripMenuItem_Click);
             // 
-            // highScoresToolStripMenuItem1
+            // manageToolStripMenuItem
             // 
-            this.highScoresToolStripMenuItem1.Name = "highScoresToolStripMenuItem1";
-            this.highScoresToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.highScoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.highScoresToolStripMenuItem1.Text = "High Scores";
-            this.highScoresToolStripMenuItem1.Click += new System.EventHandler(this.highScoresToolStripMenuItem1_Click);
+            this.manageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.populateDBTablesToolStripMenuItem});
+            this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.manageToolStripMenuItem.Text = "Manage";
+            // 
+            // populateDBTablesToolStripMenuItem
+            // 
+            this.populateDBTablesToolStripMenuItem.Name = "populateDBTablesToolStripMenuItem";
+            this.populateDBTablesToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.populateDBTablesToolStripMenuItem.Text = "Populate DB Tables";
+            this.populateDBTablesToolStripMenuItem.Click += new System.EventHandler(this.populateDBTablesToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -668,6 +686,8 @@
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem populateDBTablesToolStripMenuItem;
     }
 }
 
