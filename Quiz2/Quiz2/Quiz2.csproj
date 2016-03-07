@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Quiz2DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Quiz2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quiz2DataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +119,17 @@
     </None>
     <None Include="Quiz2DataSet1.xss">
       <DependentUpon>Quiz2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Quiz2DataSet2.xsc">
+      <DependentUpon>Quiz2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Quiz2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Quiz2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Quiz2DataSet2.xss">
+      <DependentUpon>Quiz2DataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
