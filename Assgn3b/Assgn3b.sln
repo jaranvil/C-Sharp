@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assgn3b", "Assgn3b\Assgn3b.csproj", "{AF3D982B-A69F-4599-8036-B2376368099A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLib", "DataLib\DataLib.csproj", "{4D9D84BD-D77B-4EDE-8F2F-4C0D3A41CFF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF3D982B-A69F-4599-8036-B2376368099A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF3D982B-A69F-4599-8036-B2376368099A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF3D982B-A69F-4599-8036-B2376368099A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF3D982B-A69F-4599-8036-B2376368099A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D9D84BD-D77B-4EDE-8F2F-4C0D3A41CFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D9D84BD-D77B-4EDE-8F2F-4C0D3A41CFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D9D84BD-D77B-4EDE-8F2F-4C0D3A41CFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9D84BD-D77B-4EDE-8F2F-4C0D3A41CFF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
