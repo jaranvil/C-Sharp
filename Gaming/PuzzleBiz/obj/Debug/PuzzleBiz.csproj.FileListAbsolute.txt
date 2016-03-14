@@ -13,3 +13,8 @@ H:\Repos\C-Sharp\Gaming\PuzzleBiz\bin\Debug\PuzzleBiz.pdb
 H:\Repos\C-Sharp\Gaming\PuzzleBiz\obj\Debug\PuzzleBiz.csprojResolveAssemblyReference.cache
 H:\Repos\C-Sharp\Gaming\PuzzleBiz\obj\Debug\PuzzleBiz.dll
 H:\Repos\C-Sharp\Gaming\PuzzleBiz\obj\Debug\PuzzleBiz.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\Gaming\PuzzleBiz\bin\Debug\PuzzleBiz.dll
+C:\Users\Jared\Documents\Repos\C-Sharp\Gaming\PuzzleBiz\bin\Debug\PuzzleBiz.pdb
+C:\Users\Jared\Documents\Repos\C-Sharp\Gaming\PuzzleBiz\obj\Debug\PuzzleBiz.csprojResolveAssemblyReference.cache
+C:\Users\Jared\Documents\Repos\C-Sharp\Gaming\PuzzleBiz\obj\Debug\PuzzleBiz.dll
+C:\Users\Jared\Documents\Repos\C-Sharp\Gaming\PuzzleBiz\obj\Debug\PuzzleBiz.pdb
