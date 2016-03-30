@@ -1,0 +1,7 @@
+//Aisle name, location, attendant, item#id,item#name,unit price, no_of_units
+A,far right,geoff wild, 5612,sugar_typeA,1.2,34
+B,far left, helen sam,2131,salt,1,22
+C,infront of cashier, jenny yu, 3312,olive_greek,2,34
+D,right next to A, morse hall,4321,white_flour_no_brand,0.5,28
+E,middle,frank zena,3211,soft drinks_pepsi,1.7,30
+B,far left,helen sam,5555,honey_zeta,0.89,11
