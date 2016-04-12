@@ -50,5 +50,27 @@ namespace Rooms
             player.keyUp(e.KeyCode);
             e.Handled = true;
         }
+
+        private void pbCanvas_MouseDown(object sender, MouseEventArgs e)
+        {
+ 
+            int x = Convert.ToInt32(Math.Round(Cursor.Position.X / 5.0) * 5);
+            int y = Convert.ToInt32(Math.Round(Cursor.Position.Y / 5.0) * 5);
+
+            int gcd = Gcd(x, y);
+            int xMove = x / gcd;
+            int yMove = y / gcd;
+
+            player.ShootWeapon(xMove, yMove);
+        }
+
+        private static int Gcd(int a, int b)
+        {
+            if (a == 0)
+                return b;
+            else
+                return Gcd(b % a, a);
+        }
+
     }
 }

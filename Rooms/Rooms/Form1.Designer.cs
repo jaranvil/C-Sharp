@@ -43,10 +43,11 @@
             this.pbCanvas.TabIndex = 0;
             this.pbCanvas.TabStop = false;
             this.pbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbCanvas_Paint);
+            this.pbCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCanvas_MouseDown);
             // 
             // mainTimer
             // 
-            this.mainTimer.Interval = 10;
+            this.mainTimer.Interval = 500;
             this.mainTimer.Tick += new System.EventHandler(this.mainTimer_Tick);
             // 
             // Form1

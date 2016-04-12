@@ -22,12 +22,14 @@ namespace Rooms
         private Boolean movingDown = false;
         private Boolean movingLeft = false;
 
+        List<Weapon> weapons = new List<Weapon>();
+
         public Player(int x, int y, int width, int height)
         {
             this.x = x;
             this.y = y;
             this.cWidth = width;
-            this.cHeight = height;
+            this.cHeight = height;            
         }
 
         public void draw(Graphics g)
@@ -44,10 +46,34 @@ namespace Rooms
             if (movingRight)
                 newX += speed;
 
-            // TODO validate new positions
+            // right wall
+            if (newX < cellSize)
+                newX = cellSize;
+            //top
+            if (newY < cellSize)
+                newY = cellSize;
+            // right
+            if (newX + cellSize > cWidth - cellSize)
+                newX = cWidth - (cellSize*2);
+            //bottom
+            if (newY + cellSize > cHeight - cellSize)
+                newY = cHeight - (cellSize*2);
+
+            x = newX;
+            y = newY;       
 
             Brush brush = new SolidBrush(Color.Blue);
             g.FillRectangle(brush, x, y, cellSize, cellSize);
+
+            for(int i = 0;i < weapons.Count;i++)
+            {
+                weapons[i].Draw(g);
+            }
+        }
+
+        public void ShootWeapon(int xMove, int yMove)
+        {
+            weapons.Add(new Weapon(x, y, xMove, yMove));
         }
 
         public void keyDown(Keys key)
@@ -73,5 +99,10 @@ namespace Rooms
             if (key == Keys.S)
                 movingDown = false;
         }
+
+    
+           
+
+      
     }
 }

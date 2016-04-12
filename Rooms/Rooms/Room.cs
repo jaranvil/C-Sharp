@@ -22,17 +22,17 @@ namespace Rooms
         public void draw(Graphics g)
         {
             // gridlines
-            int horizontalLines = cHeight / cellSize;
-            int verticalLines = cWidth / cellSize;
-            Pen pen = new Pen(Color.Gray);
-            for (int i = 0;i < horizontalLines;i++)
-            {
-                g.DrawLine(pen, 0, i * cellSize, cWidth, i * cellSize);
-            }
-            for (int i = 0; i < verticalLines; i++)
-            {
-                g.DrawLine(pen, i*cellSize, 0, i*cellSize, cHeight);
-            }
+            //int horizontalLines = cHeight / cellSize;
+            //int verticalLines = cWidth / cellSize;
+            //Pen pen = new Pen(Color.Gray);
+            //for (int i = 0;i < horizontalLines;i++)
+            //{
+            //    g.DrawLine(pen, 0, i * cellSize, cWidth, i * cellSize);
+            //}
+            //for (int i = 0; i < verticalLines; i++)
+            //{
+            //    g.DrawLine(pen, i*cellSize, 0, i*cellSize, cHeight);
+            //}
 
             drawWalls(g);
         }
@@ -45,6 +45,8 @@ namespace Rooms
             g.FillRectangle(brush, 0, 0, cellSize, cHeight);
             g.FillRectangle(brush, cWidth - cellSize, 0, cellSize, cHeight);
         }
+
+        
 
     }
 }
