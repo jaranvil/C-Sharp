@@ -11,8 +11,8 @@ namespace Rooms
     class Player
     {
         private int cellSize = 50;
-        private int x;
-        private int y;
+        public int x;
+        public int y;
         private int cWidth;
         private int cHeight;
         private int speed = 10;
@@ -22,7 +22,7 @@ namespace Rooms
         private Boolean movingDown = false;
         private Boolean movingLeft = false;
 
-        List<Weapon> weapons = new List<Weapon>();
+        public List<Weapon> weapons = new List<Weapon>();
 
         public Player(int x, int y, int width, int height)
         {
@@ -46,18 +46,54 @@ namespace Rooms
             if (movingRight)
                 newX += speed;
 
-            // right wall
+            // left wall
             if (newX < cellSize)
-                newX = cellSize;
+            {
+                int doorTop = cHeight / 2 - 50;
+                int doorBottom = cHeight / 2 + 50;
+
+                if (!(y > doorTop && y+cellSize < doorBottom))
+                {
+                    newX = cellSize;
+                }
+            }
+                
             //top
             if (newY < cellSize)
-                newY = cellSize;
+            {
+                int doorleft = cWidth / 2 - 50;
+                int doorRight = cWidth / 2 + 50;
+
+                if (!(x > doorleft && x+cellSize < doorRight))
+                {
+                    newY = cellSize;
+                }
+            }
+                
             // right
             if (newX + cellSize > cWidth - cellSize)
-                newX = cWidth - (cellSize*2);
+            {
+                int doorTop = cHeight / 2 - 50;
+                int doorBottom = cHeight / 2 + 50;
+
+                if (!(y > doorTop && y + cellSize < doorBottom))
+                {
+                    newX = cWidth - (cellSize * 2);
+                }
+            }
+                
             //bottom
             if (newY + cellSize > cHeight - cellSize)
-                newY = cHeight - (cellSize*2);
+            {
+                int doorleft = cWidth / 2 - 50;
+                int doorRight = cWidth / 2 + 50;
+
+                if (!(x > doorleft && x + cellSize < doorRight))
+                {
+                    newY = cHeight - (cellSize * 2);
+                }
+            }
+            
 
             x = newX;
             y = newY;       
@@ -71,9 +107,33 @@ namespace Rooms
             }
         }
 
-        public void ShootWeapon(int xMove, int yMove)
+        public void ResetPosition(int id)
         {
-            weapons.Add(new Weapon(x, y, xMove, yMove));
+            if (id == 1)
+            {
+                this.x = cWidth - (cellSize * 2);
+                this.y = cHeight / 2;
+            }
+            if (id == 2)
+            {
+                this.x = cWidth/2;
+                this.y = cHeight - (cellSize*2);
+            }
+            if (id == 3)
+            {
+                this.x = cellSize;
+                this.y = cHeight / 2;
+            }
+            if (id == 4)
+            {
+                this.x = cWidth/2;
+                this.y = cellSize;
+            }
+        }
+
+        public void ShootWeapon(int x, int y)
+        {
+            weapons.Add(new Weapon(x, y, this.x, this.y));
         }
 
         public void keyDown(Keys key)
