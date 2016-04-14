@@ -43,10 +43,12 @@ namespace Rooms
             Random r = new Random();
             enemies.Clear();
             coins.Clear();
-            
+
+            int enemySpawnMargin = 250;
+
             for (int i = 0;i < 2;i++)
             {
-                enemies.Add(new Enemy(r.Next(cWidth), r.Next(cHeight), cWidth, cHeight));
+                enemies.Add(new Enemy(enemySpawnMargin+ r.Next(cWidth- enemySpawnMargin), enemySpawnMargin + r.Next(cHeight- enemySpawnMargin*2), cWidth, cHeight));
             }
 
             for (int i = 0; i < 5; i++)

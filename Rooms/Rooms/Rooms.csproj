@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,6 +105,10 @@
     <ProjectReference Include="..\Biz\Biz.csproj">
       <Project>{93fc8419-76c0-4036-a86d-80c79b736112}</Project>
       <Name>Biz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLib\DataLib.csproj">
+      <Project>{b8d6fe55-c6ab-4bb3-a48b-b3a9e67048d6}</Project>
+      <Name>DataLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

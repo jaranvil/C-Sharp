@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using Biz;
 using Rooms.Properties;
 using System.Media;
+using DataLib;
 
 namespace Rooms
 {
     public partial class Form1 : Form
     {
+        private DataManager db;
+
         private int cellSize = 50;
         private int score = 0;
         private int rooms = 0;
@@ -28,10 +31,13 @@ namespace Rooms
         SoundPlayer coinSound;
 
         private int enemyInterval = 1000;
+        private Boolean gameOver = false;
 
         public Form1()
         {
             InitializeComponent();
+
+            //db = new DataManager();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,12 +60,18 @@ namespace Rooms
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (!mainTimer.Enabled)
-            {            
-                mainTimer.Start();
-                enemyTimer.Start();
-                
-            }
+          
+            enemyInterval = 1000;
+            gameOver = false;
+            enemies.Clear();
+            coins.Clear();
+            score = 0;
+            rooms = 0;
+            lblPaused.Text = "";
+
+            mainTimer.Start();
+            enemyTimer.Start();
+            
         }
 
         private void mainTimer_Tick(object sender, EventArgs e)
@@ -142,6 +154,7 @@ namespace Rooms
             lblPaused.Text = strings.strings[3];
             mainTimer.Stop();
             enemyTimer.Stop();
+            gameOver = true;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
