@@ -38,17 +38,19 @@
             this.lblRoomsName = new System.Windows.Forms.Label();
             this.lblRooms = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
             this.SuspendLayout();
             // 
             // pbCanvas
             // 
             this.pbCanvas.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pbCanvas.Location = new System.Drawing.Point(63, 76);
+            this.pbCanvas.Location = new System.Drawing.Point(94, 76);
             this.pbCanvas.Name = "pbCanvas";
-            this.pbCanvas.Size = new System.Drawing.Size(1350, 750);
+            this.pbCanvas.Size = new System.Drawing.Size(1058, 731);
             this.pbCanvas.TabIndex = 0;
             this.pbCanvas.TabStop = false;
+            this.pbCanvas.Click += new System.EventHandler(this.pbCanvas_Click);
             this.pbCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pbCanvas_Paint);
             this.pbCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbCanvas_MouseDown);
             // 
@@ -67,7 +69,7 @@
             this.lblScoreName.AutoSize = true;
             this.lblScoreName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScoreName.ForeColor = System.Drawing.Color.White;
-            this.lblScoreName.Location = new System.Drawing.Point(58, 47);
+            this.lblScoreName.Location = new System.Drawing.Point(96, 47);
             this.lblScoreName.Name = "lblScoreName";
             this.lblScoreName.Size = new System.Drawing.Size(20, 26);
             this.lblScoreName.TabIndex = 1;
@@ -79,7 +81,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(138, 47);
+            this.lblScore.Location = new System.Drawing.Point(176, 47);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(25, 26);
             this.lblScore.TabIndex = 2;
@@ -90,7 +92,7 @@
             this.lblPaused.AutoSize = true;
             this.lblPaused.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaused.ForeColor = System.Drawing.Color.White;
-            this.lblPaused.Location = new System.Drawing.Point(658, 22);
+            this.lblPaused.Location = new System.Drawing.Point(510, 22);
             this.lblPaused.Name = "lblPaused";
             this.lblPaused.Size = new System.Drawing.Size(36, 51);
             this.lblPaused.TabIndex = 3;
@@ -102,7 +104,7 @@
             this.lblRoomsName.AutoSize = true;
             this.lblRoomsName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomsName.ForeColor = System.Drawing.Color.White;
-            this.lblRoomsName.Location = new System.Drawing.Point(188, 47);
+            this.lblRoomsName.Location = new System.Drawing.Point(226, 47);
             this.lblRoomsName.Name = "lblRoomsName";
             this.lblRoomsName.Size = new System.Drawing.Size(20, 26);
             this.lblRoomsName.TabIndex = 4;
@@ -114,7 +116,7 @@
             this.lblRooms.AutoSize = true;
             this.lblRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRooms.ForeColor = System.Drawing.Color.White;
-            this.lblRooms.Location = new System.Drawing.Point(269, 47);
+            this.lblRooms.Location = new System.Drawing.Point(307, 47);
             this.lblRooms.Name = "lblRooms";
             this.lblRooms.Size = new System.Drawing.Size(25, 26);
             this.lblRooms.TabIndex = 5;
@@ -122,7 +124,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(1338, 47);
+            this.btnStart.Location = new System.Drawing.Point(1077, 47);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 6;
@@ -132,12 +134,23 @@
             this.btnStart.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnStart_KeyDown);
             this.btnStart.KeyUp += new System.Windows.Forms.KeyEventHandler(this.btnStart_KeyUp);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(996, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Scores";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1503, 902);
+            this.ClientSize = new System.Drawing.Size(1216, 849);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblRooms);
             this.Controls.Add(this.lblRoomsName);
@@ -167,6 +180,7 @@
         private System.Windows.Forms.Label lblRoomsName;
         private System.Windows.Forms.Label lblRooms;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button button1;
     }
 }
 

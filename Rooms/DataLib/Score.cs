@@ -13,10 +13,11 @@ namespace DataLib
     {
         public Score() { }
 
-        public Score(string name, int score)
+        public Score(int Id, string name, int score)
         {
             this.Name = name;
             this.ScoreVal = score;
+            this.Id = Id;
         }
 
         [Column(IsPrimaryKey = true)]

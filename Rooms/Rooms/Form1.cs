@@ -27,7 +27,7 @@ namespace Rooms
         List<Enemy> enemies = new List<Enemy>();
         List<Coin> coins = new List<Coin>();
 
-        Strings strings = new Strings("eng");
+        Strings strings = new Strings("fr");
         SoundPlayer coinSound;
 
         private int enemyInterval = 1000;
@@ -37,7 +37,7 @@ namespace Rooms
         {
             InitializeComponent();
 
-            //db = new DataManager();
+            db = new DataManager();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -88,6 +88,12 @@ namespace Rooms
             int[] y = { 0, this.Height - cellSize };
 
             enemies.Add(new Enemy(x[r.Next(x.Length)], y[r.Next(y.Length)], this.Width, this.Height));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Scores scores = new Scores(db);
+            scores.Show();
         }
 
         private void pbCanvas_Paint(object sender, PaintEventArgs e)
@@ -155,6 +161,11 @@ namespace Rooms
             mainTimer.Stop();
             enemyTimer.Stop();
             gameOver = true;
+
+            NewScore form = new NewScore(db, score);
+            form.Show();
+
+            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -246,6 +257,13 @@ namespace Rooms
         {
 
         }
+
+        private void pbCanvas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         
     }
